@@ -1,6 +1,6 @@
 %define name	gkrellm-plugins
-%define version	2.2.9
-%define release	%mkrel 3
+%define version	2.2.10
+%define release	%mkrel 1
 
 %define gkrellmms_version	2.1.21
 %define gkrellweather_version	2.0.7
@@ -276,14 +276,14 @@ install -c -s -m 755 gkrellm-volume/volume.so %{buildroot}%{_libdir}/gkrellm2/pl
 install -c -s -m 755 gkrellm-mailwatch/mailwatch.so %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellmitime-%{gkrellmitime_version}/gkrellm_itime.so  %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellStock-%{gkrellStock_version}/gkrellstock.so  %{buildroot}%{_libdir}/gkrellm2/plugins
-install -c -s -m 755 gkrellStock-%{gkrellStock_version}/GetQuote2 %{buildroot}%{_datadir}/gkrellm2/scripts
+install -c -m 755 gkrellStock-%{gkrellStock_version}/GetQuote2 %{buildroot}%{_datadir}/gkrellm2/scripts
 install -c -s -m 755 gkrellShoot-%{gkrellShoot_version}/gkrellshoot.so  %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellmss-%{gkrellmss_version}/src/gkrellmss.so  %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellmwireless/wireless.so  %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellm-radio/radio.so  %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellkam-%{gkrellkam_version}/gkrellkam2.so  %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellweather-%{gkrellweather_version}/gkrellweather.so %{buildroot}%{_libdir}/gkrellm2/plugins
-install -c -s -m 755 gkrellweather-%{gkrellweather_version}/GrabWeather %{buildroot}%{_datadir}/gkrellm2/scripts
+install -c -m 755 gkrellweather-%{gkrellweather_version}/GrabWeather %{buildroot}%{_datadir}/gkrellm2/scripts
 install -c -s -m 755 gkrellm-fmonitor-%{fmonitor_version}/fmonitor.so  %{buildroot}%{_libdir}/gkrellm2/plugins
 #install -c -s -m 755 gkrellm-fmonitor-%{fmonitor_version}/sensors.tcl %{buildroot}%{_bindir}
 install -c -s -m 755 gkrellm-reminder-%{reminder_version}/reminder.so  %{buildroot}%{_libdir}/gkrellm2/plugins
