@@ -1,5 +1,5 @@
 %define name	gkrellm-plugins
-%define version	2.2.10
+%define version	2.3.0
 %define release	%mkrel 1
 
 %define gkrellmms_version	2.1.21
