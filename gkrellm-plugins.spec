@@ -1,12 +1,12 @@
 %define name	gkrellm-plugins
 %define version	2.3.0
-%define release	%mkrel 2
+%define release	%mkrel 3
 
 %define gkrellmms_version	2.1.21
 %define gkrellweather_version	2.0.7
 %define seti_version		0.7.0b
 %define gkrellStock_version	0.5.1
-%define gkrellShoot_version	0.4.3
+%define gkrellShoot_version	0.4.4
 %define snmp_version		1.0
 %define gkrellmitime_version	1.0
 %define volume_version		2.1.9
@@ -24,8 +24,7 @@
 %define gkx86info_version	0.0.2
 %define hddtemp_version		0.2-beta
 %define timers_version		1.3
-%define gkrelltop_version	2.2.6
-%define gkrelltop_weird_version	2.2-6
+%define gkrelltop_version	2.2.10
 %define gkrellmlaunch_version 0.5
 
 Name:		%{name}
@@ -41,7 +40,7 @@ Source3:	gkrellm-mailwatch-%{mailwatch_version}.tar.bz2
 Source4:	gkrellmitime-%{gkrellmitime_version}.tar.bz2
 Source5:	gkrellstock-%{gkrellStock_version}.tar.bz2
 Patch5:		gkrellstock-0.5.1.path.patch.bz2
-Source6:	http://prdownloads.sourceforge.net/gkrellshoot/gkrellshoot-%{gkrellShoot_version}.tar.bz2
+Source6:	http://prdownloads.sourceforge.net/gkrellshoot/gkrellshoot-%{gkrellShoot_version}.tar.gz
 Source7:	gkrellmss-%{gkrellmss_version}.tar.bz2
 Source8:	gkrellmwireless-%{gkrellmwireless_version}.tar.bz2
 Source9:	gkrellm-radio-%{radio_version}.tar.bz2
@@ -61,7 +60,7 @@ Source20:	seti-%{seti_version}.tar.bz2
 Patch2:		seti-%{seti_version}-gkrellm2.patch.bz2
 Source21:	gkrellm-hddtemp-%{hddtemp_version}.tar.bz2
 Source22:	gkrellm_timers-%{timers_version}.tar.bz2
-Source23:	http://psychology.rutgers.edu/~zaimi/html/gkrelltop/gkrelltop_%{gkrelltop_weird_version}.tar.bz2
+Source23:	http://psychology.rutgers.edu/~zaimi/html/gkrelltop/gkrelltop_%{gkrelltop_version}.orig.tar.gz
 Source24:	gkrellmlaunch-%{gkrellmlaunch_version}.tar.bz2 
 
 Requires:	gkrellm = %{version}
@@ -260,7 +259,7 @@ make gkrellm2
 (cd gkrellm_timers-%{timers_version}
 make
 )
-( cd gkrelltop-%{gkrelltop_version}
+( cd gkrelltop-%{gkrelltop_version}.orig
 make clean
 make
 )
@@ -298,7 +297,7 @@ install -c -s -m 755 gkrellmoon-%{gkrellmoon_version}/gkrellmoon.so %{buildroot}
 install -c -s -m 755 seti-%{seti_version}/seti.so %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellm-hddtemp-%{hddtemp_version}/gkrellm-hddtemp.so %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellm_timers-%{timers_version}/gkrellm_timers.so %{buildroot}%{_libdir}/gkrellm2/plugins
-install -c -s -m 755 gkrelltop-%{gkrelltop_version}/gkrelltop{,d}.so %{buildroot}%{_libdir}/gkrellm2/plugins
+install -c -s -m 755 gkrelltop-%{gkrelltop_version}.orig/gkrelltop{,d}.so %{buildroot}%{_libdir}/gkrellm2/plugins
 install -c -s -m 755 gkrellmlaunch-%{gkrellmlaunch_version}/gkrellmlaunch.so %{buildroot}%{_libdir}/gkrellm2/plugins
 
 # setup various docs
@@ -333,7 +332,7 @@ cp gkrellmwireless/{Changelog,README} doc/gkrellmwireless
 mkdir -p doc/gkrellsun
 cp gkrellsun-%{gkrellsun_version}/{AUTHORS,COPYING,INSTALL,README} doc/gkrellsun
 mkdir -p doc/gkrelltop
-cp gkrelltop-%{gkrelltop_version}/README doc/gkrelltop
+cp gkrelltop-%{gkrelltop_version}.orig/README doc/gkrelltop
 mkdir -p doc/gkrellweather
 cp gkrellweather-%{gkrellweather_version}/{COPYING,ChangeLog,README} doc/gkrellweather
 %ifarch %ix86
