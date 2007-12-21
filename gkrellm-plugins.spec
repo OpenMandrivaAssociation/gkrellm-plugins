@@ -72,6 +72,7 @@ BuildRequires:	libmcrypt-devel
 BuildRequires:	libesound-devel
 BuildRequires:  libopenssl-devel
 BuildRequires:  libxtst-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 
 %description
