@@ -119,7 +119,7 @@ gkrellStock, a stock monitor.
 Summary:	Shoot plugin for %{name}
 Group:		Monitoring
 Requires:	gkrellm = %{version}
-Requires:	ImageMagick
+Requires:	imagemagick
 
 %description shoot
 gkrellShoot, a screen locker and screen capture krell.
