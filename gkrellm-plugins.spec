@@ -1,6 +1,6 @@
 %define name	gkrellm-plugins
 %define version	2.3.4
-%define release	%mkrel 3
+%define release	%mkrel 4
 
 %define gkrellmms_version	2.1.21
 %define gkrellweather_version	2.0.7
@@ -9,7 +9,7 @@
 %define gkrellShoot_version	0.4.4
 %define snmp_version		1.0
 %define gkrellmitime_version	1.0
-%define volume_version		2.1.9
+%define volume_version		2.1.13
 %define mailwatch_version	2.4.2
 %define gkrellmss_version	2.4
 %define gkrellmwireless_version	2.0.3
@@ -35,7 +35,7 @@ License:	GPL
 Group:		Monitoring
 URL:		http://gkrellm.net
 Source1:	http://gkrellm.luon.net/files/gkrellmms-%{gkrellmms_version}.tar.bz2
-Source2:	gkrellm-volume-%{volume_version}.tar.bz2
+Source2:	gkrellm-volume-%{volume_version}.tar.gz
 Source3:	gkrellm-mailwatch-%{mailwatch_version}.tar.bz2
 Source4:	gkrellmitime-%{gkrellmitime_version}.tar.bz2
 Source5:	gkrellstock-%{gkrellStock_version}.tar.bz2
