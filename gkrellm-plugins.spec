@@ -54,7 +54,6 @@ Source15:	gkrellm_snmp-%{snmp_version}.tar.gz
 Source16:	gkleds-%{gkleds_version}.tar.bz2
 Source17:	http://www.bender-suhl.de/stefan/comp/sources/gkrellmbgchg2-%{gkrellmbgchg2_version}.tar.gz
 Source18:	http://sourceforge.net/projects/gkrellsun/files/gkrellsun%20gkrellm-2.2/1.0.0/gkrellsun-%{gkrellsun_version}.tar.gz
-Patch3:		gkrellsun-0.10.6.gcc4.patch.bz2
 Source20:	seti-%{seti_version}.tar.bz2
 Patch2:		seti-%{seti_version}-gkrellm2.patch.bz2
 Source21:	gkrellm-hddtemp-%{hddtemp_version}.tar.bz2
@@ -174,9 +173,6 @@ GKrellMMS, allows you to control XMMS from within GKrellM.
 (cd seti-%{seti_version}
 %patch2 -p1 -b .gtk2
 )
-(cd gkrellsun-%{gkrellsun_version}
-#patch3 -p0 -b .gcc4
-)
 (cd gkrellweather-%{gkrellweather_version}
 %patch4 -p1 -b .path
 )
@@ -192,7 +188,7 @@ make CFLAGS="%{optflags}"
 make CFLAGS="%{optflags}"
 )
 (cd gkrellm-mailwatch
-make
+make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkrellmitime-%{gkrellmitime_version}
 make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
@@ -213,41 +209,41 @@ make CFLAGS="%{optflags}"
 make WITH_LIRC=1
 )
 (cd gkrellkam-%{gkrellkam_version}
-make
+make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkleds-%{gkleds_version}
 %ifarch x86_64
-make X11_LIB="-L/usr/X11R6/lib64 -lX11 -lXtst" CFLAGS="%{optflags}"
+make X11_LIB="-L/usr/X11R6/lib64 -lX11 -lXtst" CFLAGS="%{optflags} -fPIC"
 %else
 make CFLAGS="%{optflags}"
 %endif
 )
 (cd gkrellmbgchg2-%{gkrellmbgchg2_version}
-make
+make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkrellm-fmonitor-%{fmonitor_version}
-make CFLAGS="%{optflags}"
+make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkrellmoon-%{gkrellmoon_version}
 make CFLAGS="%{optflags}"
 )
 (cd gkrellm-reminder-%{reminder_version}
-make
+make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkrellm_snmp-%{snmp_version}
-make
+make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkrellsun-%{gkrellsun_version}/src20
 make CFLAGS="%{optflags}"
 )
 (cd gkrellweather-%{gkrellweather_version}
-make PREFIX=%{_prefix}
+make PREFIX=%{_prefix} CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd seti-%{seti_version}
-make
+make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkrellm-hddtemp-%{hddtemp_version}
-make gkrellm2 CFLAGS="%{optflags}"
+make gkrellm2 CFLAGS="%{optflags} -fPIC"
 )
 (cd gkrellm_timers-%{timers_version}
 make CFLAGS="%{optflags}"
