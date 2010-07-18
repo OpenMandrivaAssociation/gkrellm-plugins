@@ -71,7 +71,7 @@ BuildRequires:	libmcrypt-devel
 BuildRequires:	libesound-devel
 BuildRequires:  libopenssl-devel
 BuildRequires:  libxtst-devel
-BuildRequires:  cpufreq-devel
+BuildRequires:  cpufrequtils-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 
