@@ -1,6 +1,6 @@
 %define name	gkrellm-plugins
-%define version	2.3.4
-%define release	%mkrel 4
+%define version	2.3.5
+%define release	%mkrel 1
 
 %define gkrellmms_version	2.1.22
 %define gkrellweather_version	2.0.8
