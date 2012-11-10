@@ -1,0 +1,25 @@
+sources:
+  "gkleds-0.8.0.tar.bz2:"	1c5ce10009a0564fccadf0e832872230c0afe434
+  "gkrellkam_2.0.0.tar.bz2:"	57ab36a76e81d73b8e3ba5a5809f4aa03dd8df63
+  "gkrellm2-cpufreq-0.6.1.tar.gz:"	edf517c94778f9250ce68d704f01c87e0f394c6e
+  "gkrellmbgchg2-0.1.9.tar.gz:"	58354777c99d6f27bf0f745635abc7d0444c6a39
+  "gkrellm-fmonitor-2.0.4.tgz:"	5b96d5090a738efe18ac23088fe4509a63d9c366
+  "gkrellm-hddtemp-0.2-beta.tar.bz2:"	108180e2dd850f6dbda205d660a8a98b484b070f
+  "gkrellmitime-1.0.tar.bz2:"	f6c5e186cb8431248f3b19ff7a0b57cfc820f7ac
+  "gkrellmlaunch-0.5.tar.bz2:"	4951d6f7f8f37d5a2cc77f73626b6640cd2e617b
+  "gkrellm-mailwatch-2.4.3.tar.gz:"	695c85342e96fa23c17d27f19510d2d633ccb27d
+  "gkrellmms-2.1.22.tar.gz:"	f7ea788e4420cf714f9ab49025b1d172c4a37304
+  "gkrellmoon-0.6.tar.bz2:"	185387d8b9da11342df7358fb9f7ea867bc3e0c5
+  "gkrellm-radio-2.0.4.tar.bz2:"	363541ae30eec3d2a53232552626109c3a1acf23
+  "gkrellm-reminder-2.0.0.tar.bz2:"	bbb3f328daee1c1c54c6de738622e93028e3f280
+  "gkrellm_snmp-1.1.tar.gz:"	2b259d5adcef1d367e9d43259bd09e5748bc98ca
+  "gkrellmss-2.6.tar.gz:"	6f52678e834610bc11ed652d8d54f215d6c43e25
+  "gkrellm_timers-1.3.tar.bz2:"	f70ece090d089abe0f20638314df2a448ca9a0f5
+  "gkrellm-volume-2.1.13.tar.gz:"	e9ea9bdd8eac53e8d99baf7705e76c28d8c4f2c3
+  "gkrellmwireless-2.0.3.tar.bz2:"	a0aff9b195ed0a5e7e40cbc61108e8cd5bbe72cb
+  "gkrellshoot-0.4.4.tar.gz:"	0ec832116f0765717c0cd13903a40a1633ac8bab
+  "gkrellstock-0.5.1.tar.bz2:"	8e7a19a0c10d6172cd39d9eb163d1023d97100ea
+  "gkrellsun-1.0.0.tar.gz:"	3f5159fed83fb9dde37b6f009152d82acc273e5d
+  "gkrelltop_2.2.13.orig.tar.gz:"	a979409179e7564b7934de4278b9a1a95b0b7d38
+  "gkrellweather-2.0.8.tgz:"	355ea882c0519baa66d102181452c6721755fd89
+  "seti-0.7.0b.tar.bz2:"	a6782158cffce336b2f0b7119e2be81035fbb865

@@ -1,0 +1,21 @@
+diff -Naur -x '*~' -x '*.orig' -x '*.rej' gkrellweather-2.0.8/gkrellweather.c gkrellweather-2.0.8-fix-path//gkrellweather.c
+--- gkrellweather-2.0.8/gkrellweather.c	2009-01-11 19:15:02.000000000 +0100
++++ gkrellweather-2.0.8-fix-path//gkrellweather.c	2010-07-18 14:41:19.000000000 +0200
+@@ -721,7 +721,7 @@
+         options.station[1] = c[1];
+         options.station[2] = c[2];
+         options.station[3] = c[3];
+-        snprintf(options.command, 512, PREFIX "/bin/GrabWeather %s", options.station);
++        snprintf(options.command, 512, "/usr/share/gkrellm2/scripts/GrabWeather %s", options.station);
+         options.command[511] = 0;
+         snprintf(options.filename, 512, "%s/.wmWeatherReports/%s.dat",
+                 getenv("HOME"), options.station);
+@@ -986,7 +986,7 @@
+     options.windspeed_unit = 1;
+     options.pressure_unit = 1;
+     strcpy(options.station, DEFAULT_STATION_ID);
+-    snprintf(options.command, 512, "/usr/share/gkrellm/GrabWeather %s", options.station);
++    snprintf(options.command, 512, "/usr/share/gkrellm2/scripts/GrabWeather %s", options.station);
+     options.command[511] = 0;
+     snprintf(options.filename, 512, "%s/.wmWeatherReports/%s.dat",
+              getenv("HOME"), options.station);
