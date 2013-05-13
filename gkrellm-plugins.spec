@@ -1,6 +1,6 @@
 %define name	gkrellm-plugins
 %define version	2.3.5
-%define release	3
+%define release 	4
 
 %define debug_package %{nil}
 
