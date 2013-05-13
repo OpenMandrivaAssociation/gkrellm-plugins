@@ -65,8 +65,8 @@ Source25:	gkrellm2-cpufreq-%{cpufreq_version}.tar.gz
 Requires:	gkrellm = %{version}
 BuildRequires:	gkrellm-devel = %{version}
 BuildRequires:	libgtk+2.0-devel
-BuildRequires:	liblirc-devel
-BuildRequires:	libfftw-devel
+BuildRequires:	pkgconfig(liblircclient0)
+BuildRequires:	pkgconfig(fftw3)
 BuildRequires:	libmcrypt-devel
 BuildRequires:	pkgconfig(esound)
 BuildRequires:  pkgconfig(openssl)
