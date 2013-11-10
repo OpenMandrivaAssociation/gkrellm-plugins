@@ -1,6 +1,6 @@
 %define name	gkrellm-plugins
 %define version	2.3.5
-%define release 	4
+%define release 	5
 
 %define debug_package %{nil}
 
@@ -68,7 +68,6 @@ BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(liblircclient0)
 BuildRequires:	pkgconfig(fftw3)
 BuildRequires:	libmcrypt-devel
-BuildRequires:	pkgconfig(esound)
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(xtst)
 BuildRequires:  cpupower-devel
@@ -192,7 +191,7 @@ make CFLAGS="%{optflags}"
 make CFLAGS="%{optflags}"
 )
 (cd gkrellmss-%{gkrellmss_version}
-make CFLAGS="%{optflags}"
+make without-esd=yes CFLAGS="%{optflags}"
 )
 (cd gkrellmwireless
 make CFLAGS="%{optflags}"
