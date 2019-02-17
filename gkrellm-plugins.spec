@@ -29,7 +29,7 @@
 %define timers_version		1.3
 %define gkrelltop_version	2.2.13
 %define gkrellmlaunch_version 0.5
-%define cpufreq_version		0.6.1
+%define cpufreq_version		0.6.4
 
 Name:		%{name}
 Summary:	Plugins for gkrellm
