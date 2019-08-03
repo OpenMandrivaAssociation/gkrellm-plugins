@@ -1,6 +1,10 @@
 %define _disable_ld_no_undefined 1
 %define _disable_lto 1
 
+%ifarch %{znver}
+%global ldflags %{ldflags} -fuse-ld=bfd
+%endif
+
 %define name	gkrellm-plugins
 %define version	2.3.10
 %define release 	1
