@@ -3,7 +3,7 @@
 
 %define name	gkrellm-plugins
 %define version	2.3.10
-%define release 	2
+%define release 	3
 
 %define debug_package %{nil}
 
@@ -65,8 +65,8 @@ Source23:	http://sourceforge.net/projects/gkrelltop/files/gkrelltop/2.2.13/gkrel
 Source24:	gkrellmlaunch-%{gkrellmlaunch_version}.tar.bz2 
 Source25:	gkrellm2-cpufreq-%{cpufreq_version}.tar.gz
 
-Requires:	gkrellm = %{version}
-BuildRequires:	gkrellm-devel = %{version}
+Requires:	gkrellm
+BuildRequires:	gkrellm-devel
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(liblircclient0)
