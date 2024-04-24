@@ -161,13 +161,13 @@ gkrellkam, monitor static images such as webcams.
 %setup -q -T -D -c -a 25 -n %{name}
 
 (cd seti-%{seti_version}
-%patch2 -p1 -b .gtk2
+%patch 2 -p1 -b .gtk2
 )
 (cd gkrellweather-%{gkrellweather_version}
-%patch4 -p1 -b .path
+%patch 4 -p1 -b .path
 )
 (cd gkrellStock-%{gkrellStock_version}
-%patch5 -p0 -b .path
+%patch 5 -p0 -b .path
 )
 
 sed -i 's/-Wl /-Wl,/' gkrellmitime-%{gkrellmitime_version}/Makefile
