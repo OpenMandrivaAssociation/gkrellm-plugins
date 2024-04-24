@@ -3,7 +3,7 @@
 
 %define name	gkrellm-plugins
 %define version	2.3.10
-%define release 	1
+%define release 	2
 
 %define debug_package %{nil}
 
