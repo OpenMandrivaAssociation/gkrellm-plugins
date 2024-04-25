@@ -40,7 +40,7 @@ Group:		Monitoring
 URL:		http://gkrellm.net
 Source2:	gkrellm-volume-%{volume_version}.tar.gz
 Source3:	gkrellm-mailwatch-%{mailwatch_version}.tar.gz
-Source4:	gkrellmitime-%{gkrellmitime_version}.tar.bz2
+Source4:	gkrellmitime-%{gkrellmitime_version}.tar.gz
 Source5:	gkrellstock-%{gkrellStock_version}.tar.bz2
 Patch5:		gkrellstock-0.5.1.path.patch.bz2
 Source6:	http://prdownloads.sourceforge.net/gkrellshoot/gkrellshoot-%{gkrellShoot_version}.tar.gz
