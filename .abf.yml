@@ -11,7 +11,7 @@ sources:
   "gkrellm_snmp-1.1.tar.gz": 2b259d5adcef1d367e9d43259bd09e5748bc98ca
   "gkrellm_timers-1.3.tar.bz2": f70ece090d089abe0f20638314df2a448ca9a0f5
   "gkrellmbgchg2-0.1.9.tar.gz": 58354777c99d6f27bf0f745635abc7d0444c6a39
-  "gkrellmitime-1.0.tar.bz2": f6c5e186cb8431248f3b19ff7a0b57cfc820f7ac
+  gkrellmitime-1.0.tar.gz: fdb6a4d1a894f8075903ac7b5696fe111a46cdcd
   "gkrellmlaunch-0.5.tar.bz2": 4951d6f7f8f37d5a2cc77f73626b6640cd2e617b
   "gkrellmms-2.1.22.tar.gz": f7ea788e4420cf714f9ab49025b1d172c4a37304
   "gkrellmoon-0.6.tar.bz2": 185387d8b9da11342df7358fb9f7ea867bc3e0c5
