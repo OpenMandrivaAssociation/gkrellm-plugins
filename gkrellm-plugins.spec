@@ -72,6 +72,7 @@ BuildRequires:	libmcrypt-devel
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(xtst)
 BuildRequires:  cpupower-devel
+BuildRequires:	gettext
 
 %description
 This package contains some plugins for gkrellm.  Included are the following
