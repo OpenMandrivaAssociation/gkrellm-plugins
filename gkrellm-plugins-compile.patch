@@ -1,0 +1,24 @@
+diff -up gkrellm-plugins/gkrellmss-2.6/src/gkrellmss.h.omv~ gkrellm-plugins/gkrellmss-2.6/src/gkrellmss.h
+--- gkrellm-plugins/gkrellmss-2.6/src/gkrellmss.h.omv~	2024-05-05 14:14:19.065747804 +0200
++++ gkrellm-plugins/gkrellmss-2.6/src/gkrellmss.h	2024-05-05 14:14:29.773860152 +0200
+@@ -212,7 +212,7 @@ typedef struct
+ #define	DRAW_GRID	1
+ 
+ 
+-SoundMonitor	*gkrellmss;
++extern SoundMonitor	*gkrellmss;
+ 
+ 
+ void		gkrellmss_add_sound_sources(void);
+diff -up gkrellm-plugins/gkrellsun-1.0.0/src20/gkrellsun.c.omv~ gkrellm-plugins/gkrellsun-1.0.0/src20/gkrellsun.c
+--- gkrellm-plugins/gkrellsun-1.0.0/src20/gkrellsun.c.omv~	2024-05-05 14:19:41.173134842 +0200
++++ gkrellm-plugins/gkrellsun-1.0.0/src20/gkrellsun.c	2024-05-05 14:19:51.265241169 +0200
+@@ -17,7 +17,7 @@ time_t* CurrentTime;
+ #include <math.h>
+ 
+ /* splint */
+-extern gchar* g_string_free (/*@only@*/ GString *, gboolean);
++//extern gchar* g_string_free (/*@only@*/ GString *, gboolean);
+ extern void pango_font_description_free (/*@owned@*/PangoFontDescription *);
+ 
+ #define PLUGIN_HEIGHT 54

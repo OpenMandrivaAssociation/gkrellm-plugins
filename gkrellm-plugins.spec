@@ -1,10 +1,6 @@
 %define _disable_ld_no_undefined 1
 %define _disable_lto 1
 
-%define name	gkrellm-plugins
-%define version	2.3.10
-%define release 	3
-
 %define debug_package %{nil}
 
 %define gkrellweather_version	2.0.8
@@ -31,10 +27,10 @@
 %define gkrellmlaunch_version 0.5
 %define cpufreq_version		0.6.4
 
-Name:		%{name}
+Name:		gkrellm-plugins
 Summary:	Plugins for gkrellm
-Version:	%{version}
-Release:	%{release}
+Version:	2.3.10
+Release:	4
 License:	GPL
 Group:		Monitoring
 URL:		http://gkrellm.net
@@ -64,6 +60,7 @@ Source22:	gkrellm_timers-%{timers_version}.tar.bz2
 Source23:	http://sourceforge.net/projects/gkrelltop/files/gkrelltop/2.2.13/gkrelltop_%{gkrelltop_version}.orig.tar.gz
 Source24:	gkrellmlaunch-%{gkrellmlaunch_version}.tar.bz2 
 Source25:	gkrellm2-cpufreq-%{cpufreq_version}.tar.gz
+Patch100:	gkrellm-plugins-compile.patch
 
 Requires:	gkrellm
 BuildRequires:	gkrellm-devel
@@ -135,7 +132,7 @@ gkrellkam, monitor static images such as webcams.
 
 %prep
 %setup -T -c -n %{name}
-#%setup -q -T -D -c -a 1 -n %{name}
+#setup -q -T -D -c -a 1 -n %{name}
 %setup -q -T -D -c -a 2 -n %{name}
 %setup -q -T -D -c -a 3 -n %{name}
 %setup -q -T -D -c -a 4 -n %{name}
@@ -169,6 +166,7 @@ gkrellkam, monitor static images such as webcams.
 (cd gkrellStock-%{gkrellStock_version}
 %patch 5 -p0 -b .path
 )
+%autopatch -p1 -m 100
 
 sed -i 's/-Wl /-Wl,/' gkrellmitime-%{gkrellmitime_version}/Makefile
 sed -i 's/-Wl//' gkrellm-radio/Makefile
@@ -207,8 +205,8 @@ make WITH_LIRC=1
 make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkleds-%{gkleds_version}
-%ifarch x86_64
-make X11_LIB="-L/usr/X11R6/lib64 -lX11 -lXtst" CFLAGS="%{optflags} -fPIC"
+%ifarch %{x86_64}
+make X11_LIB="-lX11 -lXtst" CFLAGS="%{optflags} -fPIC"
 %else
 make CFLAGS="%{optflags}"
 %endif
