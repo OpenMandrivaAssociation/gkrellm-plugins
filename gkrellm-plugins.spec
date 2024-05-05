@@ -99,7 +99,7 @@ plugins:
 %package snmp
 Summary:	SNMP plugin for %{name}
 Group:		Monitoring
-Requires:	gkrellm = %{version}
+Requires:	gkrellm >= 2.0
 BuildRequires:	net-snmp-devel
 
 %description snmp
@@ -108,7 +108,7 @@ gkrellm_snmp, SNMP monitor.
 %package stock
 Summary:	Stock plugin for %{name}
 Group:		Monitoring
-Requires:	gkrellm = %{version}
+Requires:	gkrellm >= 2.0
 
 %description stock
 gkrellStock, a stock monitor.
@@ -116,7 +116,7 @@ gkrellStock, a stock monitor.
 %package shoot
 Summary:	Shoot plugin for %{name}
 Group:		Monitoring
-Requires:	gkrellm = %{version}
+Requires:	gkrellm >= 2.0
 Requires:	imagemagick
 
 %description shoot
@@ -125,7 +125,7 @@ gkrellShoot, a screen locker and screen capture krell.
 %package kam
 Summary:	Kam plugin for %{name}
 Group:		Monitoring
-Requires:	gkrellm = %{version}
+Requires:	gkrellm >= 2.0
 Requires:	wget
 
 %description kam
