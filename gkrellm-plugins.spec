@@ -71,7 +71,9 @@ BuildRequires:	pkgconfig(fftw3)
 BuildRequires:	libmcrypt-devel
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(xtst)
+%ifarch %{x86_64}
 BuildRequires:  cpupower-devel
+%endif
 BuildRequires:	gettext
 
 %description
