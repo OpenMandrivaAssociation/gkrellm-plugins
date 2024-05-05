@@ -208,7 +208,7 @@ make WITH_LIRC=1
 make CFLAGS="%{optflags} -fPIC `pkg-config gtk+-2.0 --cflags`"
 )
 (cd gkleds-%{gkleds_version}
-%ifarch %{x86_64}
+%ifarch %{x86_64} %{aarch64} %{riscv64}
 make X11_LIB="-lX11 -lXtst" CFLAGS="%{optflags} -fPIC"
 %else
 make CFLAGS="%{optflags}"
