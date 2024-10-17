@@ -33,7 +33,7 @@ Version:	2.3.10
 Release:	4
 License:	GPL
 Group:		Monitoring
-URL:		http://gkrellm.net
+URL:		https://gkrellm.net
 Source2:	gkrellm-volume-%{volume_version}.tar.gz
 Source3:	gkrellm-mailwatch-%{mailwatch_version}.tar.gz
 Source4:	gkrellmitime-%{gkrellmitime_version}.tar.bz2
