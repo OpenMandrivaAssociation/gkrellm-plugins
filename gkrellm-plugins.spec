@@ -63,6 +63,7 @@ Source25:	gkrellm2-cpufreq-%{cpufreq_version}.tar.gz
 Patch100:	gkrellm-plugins-compile.patch
 
 Requires:	gkrellm
+BuildRequires:	make
 BuildRequires:	gkrellm-devel
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(gtk+-2.0)
