@@ -30,7 +30,7 @@
 Name:		gkrellm-plugins
 Summary:	Plugins for gkrellm
 Version:	2.3.10
-Release:	4
+Release:	5
 License:	GPL
 Group:		Monitoring
 URL:		https://gkrellm.net
